@@ -1,0 +1,216 @@
+#include <iostream>
+#include "vector.hpp"
+
+//Constructors
+template <typename T>
+Vector<T>::Vector(): v_size(1), v_capacity(5), arr(new value_type[v_capacity]){} //default constructor
+
+template <typename T>
+Vector<T>::Vector(size_t len)
+    : v_size(len)
+    , v_capacity(v_size * 2)
+    , arr(new value_type[v_capacity])
+{}
+
+template <typename T>
+Vector<T>::Vector(size_t len, const_referance val)
+{
+    this->v_size = len;
+    this->v_capacity = v_size * 2;
+    this->arr = new value_type [v_capacity];
+    for (size_t i = 0; i < v_size; i++)
+    {
+        this->arr[i] = val;
+    }
+    
+}
+
+template <typename T>
+Vector<T>::Vector(const Vector& rhv)
+{
+    this->v_size = rhv.v_size;
+    this->v_capacity = rhv.v_capacity;
+    this->arr = new value_type[rhv.v_capacity];
+    for (size_t i = 0; i < v_size; i++)
+    {
+        this->arr[i] = rhv.arr[i];
+    }
+    
+}
+
+//Operator '=' for vector objects
+template <typename T>
+const Vector<T>& Vector<T>::operator=(const Vector& rhv)
+{
+    if (this != &rhv)
+    {
+        clear();
+        this->v_size = rhv.v_size;
+        this->v_capacity = rhv.v_capacity;
+        this->arr = new value_type[rhv.v_capacity];
+        for(size_t i = 0; i < v_size; ++i){
+            this->arr[i] = rhv.arr[i];
+        }
+    }
+    return *this;
+}
+
+//Destructor
+template <typename T>
+Vector<T>::~Vector()
+{
+    clear();
+}
+
+//private: re_cap member function.
+template <typename T>
+void Vector<T>::re_cap(size_t new_cap){
+    this->v_capacity = new_cap * 2;
+    value_type *tmp;
+    tmp = new value_type[v_capacity];
+    for (size_t i = 0; i < v_size; i++)
+    {
+        tmp[i] = this->arr[i];
+    }
+    
+    delete [] this->arr;
+    this->arr = nullptr;
+    this->arr = tmp; 
+
+}
+
+//Functions that change the contens of an array
+template <typename T>
+size_t Vector<T>::capacity()
+{
+    return this->v_capacity;
+}
+
+template <typename T>
+size_t Vector<T>::size()
+{
+    return this->v_size;
+}
+
+template <typename T>
+T& Vector<T>::front()
+{
+    return this->arr[0];
+}
+
+template <typename T>
+T& Vector<T>::back()
+{
+    this->arr[v_size-1];
+}
+
+template <typename T>
+bool Vector<T>::empty()
+{
+    if (v_size == 0)
+    {
+        return true;
+    }
+        return false;
+}
+
+template <typename T>
+void Vector<T>::print()
+{
+    for (size_t i = 0; i < v_size; i++)
+        {
+            std::cout << this->arr[i] << " ";
+        }
+    
+}
+
+template <typename T>
+void Vector<T>::push_back(const_referance val){
+    if (v_capacity <= v_size + 1)
+    {
+        re_cap(v_size + 1);
+    }
+    this->arr[v_size] = val;
+    this->v_size++;
+}
+
+template <typename T>
+void Vector<T>::pop_back()
+{
+    if (v_size == 0)
+    {
+        throw 1;
+    }
+    
+    this->v_size--;
+}
+
+template <typename T>
+void Vector<T>::re_size(size_t new_size, const value_type val){
+    if (new_size >= v_capacity)
+    {
+        re_cap(new_size);
+    }
+            
+    for (size_t i = v_size; i < new_size; ++i)
+    {
+        this->arr[i] = val;
+    }
+    this->v_size = new_size;
+       
+}
+
+template <typename T>
+void Vector<T>::insert(size_t index, const_referance val){
+    if (index >= v_size || index < 0)
+    {
+        std::cout << "There is no such index" << std::endl;
+        return;
+    }
+    if (v_size + 1 == v_capacity)
+    {
+        re_cap(v_size + 1);
+    }
+            
+    this->v_size += 1;
+    for (size_t i = index + 1; i < v_size; ++i)
+    {
+        this->arr[i] = this->arr[i - 1];
+    }
+    this->arr[index] = val;
+        
+}
+
+template <typename T>
+T& Vector<T>::at(size_t index){
+    if (index >= v_size)
+    {
+       throw 1;
+    }
+    
+    return this->arr[index];
+
+}
+
+template <typename T>
+void Vector<T>::erase(size_t index){
+    if (index >= v_size || index < 0)
+    {
+        std::cout << "There is no such index" << std::endl;
+        return;
+    }
+    for (size_t i = index; i < v_size; ++i)
+    {
+        this->arr[i] = this->arr[i + 1];
+    } 
+    --this->v_size;
+
+}   
+
+template <typename T>
+void Vector<T>::clear(){
+    delete []arr;
+    this->arr = nullptr;
+    this->v_size = 0;
+    this->v_capacity = 0;
+}
