@@ -3,7 +3,7 @@
 
 //Constructors
 template <typename T>
-Vector<T>::Vector(): v_size(1), v_capacity(5), arr(new value_type[v_capacity]){} //default constructor
+Vector<T>::Vector(): v_size(1), v_capacity(5), arr(nullptr){} //default constructor
 
 template <typename T>
 Vector<T>::Vector(size_t len)
@@ -14,10 +14,8 @@ Vector<T>::Vector(size_t len)
 
 template <typename T>
 Vector<T>::Vector(size_t len, const_referance val)
+    : Vector(len)
 {
-    this->v_size = len;
-    this->v_capacity = v_size * 2;
-    this->arr = new value_type [v_capacity];
     for (size_t i = 0; i < v_size; i++)
     {
         this->arr[i] = val;
@@ -36,6 +34,17 @@ Vector<T>::Vector(const Vector& rhv)
         this->arr[i] = rhv.arr[i];
     }
     
+}
+
+template <typename T>
+Vector<T>::Vector(std::initializer_list<T> init)
+    : Vector(0)
+{
+    for (const T &val : init)
+    {
+        push_back(val);
+    }
+
 }
 
 //Operator '=' for vector objects

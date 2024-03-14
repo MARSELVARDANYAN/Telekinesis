@@ -1,6 +1,7 @@
 #ifndef __VECTOR__
 #define __VECTOR__
 #include <iostream>
+#include <initializer_list>
 
 template <typename T>
 class Vector
@@ -23,7 +24,8 @@ public:
     Vector(size_t);
     Vector(size_t, const_referance);
     Vector(const Vector&);
-    const Vector& operator=(const Vector& rhv);
+    Vector(std::initializer_list<value_type>);
+    const Vector& operator=(const Vector&);
     ~Vector();
 
 private:
