@@ -21,16 +21,16 @@ class LinkedList
 
   public:
       using value_type = T;
-      //using size_type = size_t;
-      using referance = T&;
-      using const_referance = const T&;
-      using pointer = T*;
-      using const_pointer = const T*;
+      using size_type = size_t;
+      using referance = value_type&;
+      using const_referance = const value_type&;
+      using pointer = value_type*;
+      using const_pointer = const value_type*;
 
   public:
       LinkedList();
       LinkedList(std::initializer_list<T> initlist);
-      LinkedList(const LinkedList<T>& rhv);
+      LinkedList(const LinkedList<T>&);
       ~LinkedList();
 
   public:
@@ -51,5 +51,5 @@ class LinkedList
     
 };
 
-#include "Linked_List.cpp"
+#include "Task_3 Single_Linked_List/Src/Forward_List.tpp"
 #endif

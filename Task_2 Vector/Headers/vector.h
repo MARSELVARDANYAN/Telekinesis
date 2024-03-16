@@ -1,19 +1,20 @@
 #ifndef __VECTOR__
 #define __VECTOR__
-#include <iostream>
+//#include <iostream>
+//#include <cstddef>
 #include <initializer_list>
 
 template <typename T>
 class Vector
 {
 private:
-    size_t v_size;
-    size_t v_capacity;
+    std::size_t v_size;
+    std::size_t v_capacity;
     T* arr;
 
 public:
     using value_type = T;
-    using size_type = size_t;
+    using size_type = std::size_t;
     using referance = value_type&;
     using const_referance = const value_type&;
     using pointer = value_type*;
@@ -51,5 +52,5 @@ public:
 };
 
 
-#include "vector.cpp"
+#include "Task_2 Vector/Src/vector.tpp"
 #endif

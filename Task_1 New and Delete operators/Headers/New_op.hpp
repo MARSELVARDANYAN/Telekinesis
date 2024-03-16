@@ -25,5 +25,5 @@ template <typename T>
 void Delete_Arr(T*, size_t);
 
 
-#include "New_op.cpp"
+#include "Task_1 New and Delete operators/Src/New_op.tpp"
 #endif
