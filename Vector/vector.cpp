@@ -51,7 +51,8 @@ Vector<T>::Vector(std::initializer_list<T> init)
 
 //Operator '=' for vector objects
 template <typename T>
-const Vector<T>& Vector<T>::operator=(const Vector& rhv)
+const Vector<T>& 
+Vector<T>::operator=(const Vector& rhv)
 {
     if (this != &rhv)
     {
@@ -75,7 +76,8 @@ Vector<T>::~Vector()
 
 //private: re_cap member function.
 template <typename T>
-void Vector<T>::re_cap(size_type new_cap){
+void 
+Vector<T>::re_cap(size_type new_cap){
     this->v_capacity = new_cap * 2;
     pointer tmp;
     tmp = new value_type[v_capacity];
@@ -92,31 +94,36 @@ void Vector<T>::re_cap(size_type new_cap){
 
 //Functions that change the contens of an array
 template <typename T>
-size_t Vector<T>::capacity()
+typename Vector<T>::size_type 
+Vector<T>::capacity()
 {
     return this->v_capacity;
 }
 
 template <typename T>
-size_t Vector<T>::size()
+typename Vector<T>::size_type
+Vector<T>::size()
 {
     return this->v_size;
 }
 
 template <typename T>
-T& Vector<T>::front()
+typename Vector<T>::referance
+Vector<T>::front()
 {
     return this->arr[0];
 }
 
 template <typename T>
-T& Vector<T>::back()
+typename Vector<T>::referance
+Vector<T>::back()
 {
     this->arr[v_size-1];
 }
 
 template <typename T>
-bool Vector<T>::empty()
+bool 
+Vector<T>::empty()
 {
     if (v_size == 0)
     {
@@ -126,7 +133,8 @@ bool Vector<T>::empty()
 }
 
 template <typename T>
-void Vector<T>::print()
+void 
+Vector<T>::print()
 {
     for (size_t i = 0; i < v_size; i++)
         {
@@ -136,7 +144,8 @@ void Vector<T>::print()
 }
 
 template <typename T>
-void Vector<T>::push_back(const_referance val){
+void 
+Vector<T>::push_back(const_referance val){
     if (v_capacity <= v_size + 1)
     {
         re_cap(v_size + 1);
@@ -146,7 +155,8 @@ void Vector<T>::push_back(const_referance val){
 }
 
 template <typename T>
-void Vector<T>::pop_back()
+void 
+Vector<T>::pop_back()
 {
     if (v_size == 0)
     {
@@ -157,7 +167,8 @@ void Vector<T>::pop_back()
 }
 
 template <typename T>
-void Vector<T>::re_size(size_type new_size, const value_type val){
+void 
+Vector<T>::re_size(size_type new_size, const value_type val){
     if (new_size >= v_capacity)
     {
         re_cap(new_size);
@@ -172,7 +183,8 @@ void Vector<T>::re_size(size_type new_size, const value_type val){
 }
 
 template <typename T>
-void Vector<T>::insert(size_type index, const_referance val){
+void 
+Vector<T>::insert(size_type index, const_referance val){
     if (index >= v_size || index < 0)
     {
         std::cout << "There is no such index" << std::endl;
@@ -193,7 +205,8 @@ void Vector<T>::insert(size_type index, const_referance val){
 }
 
 template <typename T>
-T& Vector<T>::at(size_type index){
+typename Vector<T>::referance
+Vector<T>::at(size_type index){
     if (index >= v_size)
     {
        throw 1;
@@ -204,7 +217,8 @@ T& Vector<T>::at(size_type index){
 }
 
 template <typename T>
-void Vector<T>::erase(size_type index){
+void 
+Vector<T>::erase(size_type index){
     if (index >= v_size || index < 0)
     {
         std::cout << "There is no such index" << std::endl;
@@ -219,7 +233,8 @@ void Vector<T>::erase(size_type index){
 }   
 
 template <typename T>
-void Vector<T>::clear(){
+void 
+Vector<T>::clear(){
     delete []arr;
     this->arr = nullptr;
     this->v_size = 0;
