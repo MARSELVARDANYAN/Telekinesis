@@ -1,19 +1,21 @@
 #include <iostream>
 #include "vector.hpp"
 
+
+
 //Constructors
 template <typename T>
 Vector<T>::Vector(): v_size(1), v_capacity(5), arr(nullptr){} //default constructor
 
 template <typename T>
-Vector<T>::Vector(size_t len)
+Vector<T>::Vector(size_type len)
     : v_size(len)
     , v_capacity(v_size * 2)
     , arr(new value_type[v_capacity])
 {}
 
 template <typename T>
-Vector<T>::Vector(size_t len, const_referance val)
+Vector<T>::Vector(size_type len, const_referance val)
     : Vector(len)
 {
     for (size_t i = 0; i < v_size; i++)
@@ -73,9 +75,9 @@ Vector<T>::~Vector()
 
 //private: re_cap member function.
 template <typename T>
-void Vector<T>::re_cap(size_t new_cap){
+void Vector<T>::re_cap(size_type new_cap){
     this->v_capacity = new_cap * 2;
-    value_type *tmp;
+    pointer tmp;
     tmp = new value_type[v_capacity];
     for (size_t i = 0; i < v_size; i++)
     {
@@ -155,7 +157,7 @@ void Vector<T>::pop_back()
 }
 
 template <typename T>
-void Vector<T>::re_size(size_t new_size, const value_type val){
+void Vector<T>::re_size(size_type new_size, const value_type val){
     if (new_size >= v_capacity)
     {
         re_cap(new_size);
@@ -170,7 +172,7 @@ void Vector<T>::re_size(size_t new_size, const value_type val){
 }
 
 template <typename T>
-void Vector<T>::insert(size_t index, const_referance val){
+void Vector<T>::insert(size_type index, const_referance val){
     if (index >= v_size || index < 0)
     {
         std::cout << "There is no such index" << std::endl;
@@ -191,7 +193,7 @@ void Vector<T>::insert(size_t index, const_referance val){
 }
 
 template <typename T>
-T& Vector<T>::at(size_t index){
+T& Vector<T>::at(size_type index){
     if (index >= v_size)
     {
        throw 1;
@@ -202,7 +204,7 @@ T& Vector<T>::at(size_t index){
 }
 
 template <typename T>
-void Vector<T>::erase(size_t index){
+void Vector<T>::erase(size_type index){
     if (index >= v_size || index < 0)
     {
         std::cout << "There is no such index" << std::endl;

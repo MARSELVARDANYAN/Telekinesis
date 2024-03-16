@@ -13,39 +13,39 @@ private:
 
 public:
     using value_type = T;
-    //using size_type = size_t;
-    using referance = T&;
-    using const_referance = const T&;
-    //using pointer = T*;
-    using const_pointer = const T*;
+    using size_type = size_t;
+    using referance = value_type&;
+    using const_referance = const value_type&;
+    using pointer = value_type*;
+    using const_pointer = const pointer;
 
 public:
     Vector();
-    Vector(size_t);
-    Vector(size_t, const_referance);
+    Vector(size_type);
+    Vector(size_type, const_referance);
     Vector(const Vector&);
     Vector(std::initializer_list<value_type>);
     const Vector& operator=(const Vector&);
     ~Vector();
 
 private:
-    void re_cap(size_t);
+    void re_cap(size_type);
 
 public:
-    size_t capacity();
-    size_t size();
-    T& front();
-    T& back();
+    size_type capacity();
+    size_type size();
+    referance front();
+    referance back();
     bool empty();
     void print();
 
 public:
     void push_back(const_referance);
     void pop_back();
-    void re_size(size_t, const value_type);
-    void insert(size_t, const_referance);
-    T& at(size_t);
-    void erase(size_t);
+    void re_size(size_type, const value_type);
+    void insert(size_type, const_referance);
+    referance at(size_type);
+    void erase(size_type);
     void clear();
 
 };
