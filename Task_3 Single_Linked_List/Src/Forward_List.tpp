@@ -116,7 +116,7 @@ void LinkedList<T>::push_back(const_referance)
         delete current->next;
         current->next = nullptr;
     }
-    --L_size;
+    ++L_size;
 }
 
 template <typename T>
