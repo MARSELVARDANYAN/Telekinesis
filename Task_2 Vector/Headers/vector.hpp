@@ -1,6 +1,6 @@
 #ifndef __VECTORTPP__
 #define __VECTORTPP__
-#include "Task_2 Vector/Headers/vector.h"
+#include "vector.h"
 #include <iostream>
 
 

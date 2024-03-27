@@ -1,0 +1,1 @@
+/usr/bin/clang++-16 -g CMakeFiles/Vector.dir/Src/main.cpp.o -o Vector 

@@ -1,0 +1,3 @@
+/home/marsel/Telekinesis/Task_2 Vector/build/CMakeFiles/Vector.dir
+/home/marsel/Telekinesis/Task_2 Vector/build/CMakeFiles/edit_cache.dir
+/home/marsel/Telekinesis/Task_2 Vector/build/CMakeFiles/rebuild_cache.dir
