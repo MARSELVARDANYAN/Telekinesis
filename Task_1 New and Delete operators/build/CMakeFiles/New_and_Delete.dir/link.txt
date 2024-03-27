@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/New_and_Delete.dir/Src/main.cpp.o -o New_and_Delete 
