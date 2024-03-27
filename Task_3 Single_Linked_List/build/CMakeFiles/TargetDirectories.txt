@@ -1,0 +1,3 @@
+/home/marsel/Telekinesis/Task_3 Single_Linked_List/build/CMakeFiles/Forward_List.dir
+/home/marsel/Telekinesis/Task_3 Single_Linked_List/build/CMakeFiles/edit_cache.dir
+/home/marsel/Telekinesis/Task_3 Single_Linked_List/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/clang++-16 -g CMakeFiles/Forward_List.dir/Src/main.cpp.o -o Forward_List 
