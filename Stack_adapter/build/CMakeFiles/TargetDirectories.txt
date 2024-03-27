@@ -1,0 +1,3 @@
+/home/marsel/Рабочий стол/Stack/build/CMakeFiles/Stack.dir
+/home/marsel/Рабочий стол/Stack/build/CMakeFiles/edit_cache.dir
+/home/marsel/Рабочий стол/Stack/build/CMakeFiles/rebuild_cache.dir
