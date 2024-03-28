@@ -16,10 +16,9 @@ QUEUE<T, Container>::QUEUE(const QUEUE<T, Container>& rhv)
 template <typename T, typename Container>
 QUEUE<T, Container>::QUEUE(QUEUE && other)
 {   
-
-    other = ob;
-    other = nullptr;
-
+    ob.clear();
+    ob = other.ob;
+    other.ob = {nullptr};
 }
 
 template <typename T, typename Container>
