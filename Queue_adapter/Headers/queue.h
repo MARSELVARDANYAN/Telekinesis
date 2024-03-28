@@ -26,6 +26,8 @@ class QUEUE
         QUEUE(const QUEUE & rhv);
         QUEUE(QUEUE&& other);
         QUEUE(std::initializer_list<T> init);
+        const QUEUE<T, Container>& operator=(const QUEUE<T, Container>& rhv);
+        QUEUE<T, Container>& operator=(QUEUE<T, Container>&& rhv);
         ~QUEUE();
 
     public:

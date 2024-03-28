@@ -16,9 +16,10 @@ QUEUE<T, Container>::QUEUE(const QUEUE<T, Container>& rhv)
 template <typename T, typename Container>
 QUEUE<T, Container>::QUEUE(QUEUE && other)
 {   
-    ob.clear();
-    ob = other.ob;
-    other.ob = {nullptr};
+
+    other = ob;
+    other = nullptr;
+
 }
 
 template <typename T, typename Container>
@@ -31,6 +32,33 @@ QUEUE<T, Container>::QUEUE(std::initializer_list<T> init)
     }
     
 }
+
+
+template <typename T, typename Container>
+const QUEUE<T, Container>& 
+QUEUE<T, Container>::operator=(const QUEUE<T, Container>& rhv)
+{
+    if (this != &rhv) {
+        ob.clear();
+        ob = (rhv.ob);
+    }
+
+    return *this;
+    
+    
+}
+
+
+template<typename T , typename Container>
+QUEUE<T,Container>& 
+QUEUE<T,Container>::operator=(QUEUE&& rhv){
+    if (this != &rhv) {        
+        ob = std::move(rhv.ob);
+    }
+
+    return *this; 
+}
+
 
 template <typename T, typename Container>
 QUEUE<T, Container>::~QUEUE()
