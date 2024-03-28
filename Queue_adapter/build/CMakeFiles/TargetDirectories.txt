@@ -1,0 +1,3 @@
+/home/marsel/Рабочий стол/Queue/build/CMakeFiles/Queue.dir
+/home/marsel/Рабочий стол/Queue/build/CMakeFiles/edit_cache.dir
+/home/marsel/Рабочий стол/Queue/build/CMakeFiles/rebuild_cache.dir

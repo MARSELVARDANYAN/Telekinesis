@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/marsel/Рабочий стол/Queue/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -o CMakeFiles/Queue.dir/Src/main.cpp.o -c \"/home/marsel/Рабочий стол/Queue/Src/main.cpp\"",
+  "file": "/home/marsel/Рабочий стол/Queue/Src/main.cpp",
+  "output": "CMakeFiles/Queue.dir/Src/main.cpp.o"
+},
+{
+  "directory": "/home/marsel/Рабочий стол/Queue/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -o CMakeFiles/Queue.dir/Src/queue.cpp.o -c \"/home/marsel/Рабочий стол/Queue/Src/queue.cpp\"",
+  "file": "/home/marsel/Рабочий стол/Queue/Src/queue.cpp",
+  "output": "CMakeFiles/Queue.dir/Src/queue.cpp.o"
+}
+]
