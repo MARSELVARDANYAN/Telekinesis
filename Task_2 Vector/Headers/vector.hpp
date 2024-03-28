@@ -1,9 +1,4 @@
-#ifndef __VECTORTPP__
-#define __VECTORTPP__
 #include "vector.h"
-#include <iostream>
-
-
 
 
 //Constructors
@@ -68,6 +63,14 @@ Vector<T>::operator=(const Vector& rhv)
         }
     }
     return *this;
+}
+
+
+template <typename T>
+typename Vector<T>::referance
+Vector<T>::operator[](size_type ind)
+{
+    return arr[ind];
 }
 
 //Destructor
@@ -244,4 +247,24 @@ Vector<T>::clear(){
     this->v_capacity = 0;
 }
 
-#endif
+
+//Non member function
+namespace std
+{
+    template <typename T>
+    std::ostream& operator<<(std::ostream& out, Vector<T>& ob)
+    {      
+    
+        for (size_t i = 0; i < ob.size(); i++)
+        {
+        
+            out << ob[i] << ' ';
+        }
+    
+        return out;
+    }
+} // namespace std
+
+
+
+

@@ -1,6 +1,6 @@
 #ifndef __VECTOR__
 #define __VECTOR__
-//#include <iostream>
+#include <iostream>
 //#include <cstddef>
 #include <initializer_list>
 
@@ -27,6 +27,7 @@ public:
     Vector(const Vector&);
     Vector(std::initializer_list<value_type>);
     const Vector& operator=(const Vector&);
+    referance operator[](size_type ind);
     ~Vector();
 
 private:
@@ -50,6 +51,13 @@ public:
     void clear();
 
 };
+
+
+namespace std
+{
+    template <typename T>
+    std::ostream& operator<<(std::ostream& out, Vector<T>& ob);
+} // namespace std
 
 
 #include "../Headers/vector.hpp"

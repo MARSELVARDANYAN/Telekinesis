@@ -1,6 +1,7 @@
 #include "../Headers/vector.h"
 #include <iostream>
 
+
 int main () 
 {
    
@@ -16,6 +17,8 @@ int main ()
     std::cout << std::endl;
     ob3.print();
     std::cout << std::endl;
+
+    std::cout << ob3 << std::endl;
 
     return 0;
 }
