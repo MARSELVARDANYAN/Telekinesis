@@ -49,6 +49,7 @@ public:
     referance at(size_type);
     void erase(size_type);
     void clear();
+    void Swap(Vector& ob);
 
 };
 
