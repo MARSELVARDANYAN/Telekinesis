@@ -47,6 +47,15 @@ Vector<T>::Vector(std::initializer_list<T> init)
 
 }
 
+template <typename T>
+Vector<T>::Vector(Vector&& other)
+{   
+    ob.clear();
+    ob = other.ob;
+    other.ob = {nullptr};
+    
+}
+
 //Operator '=' for vector objects
 template <typename T>
 const Vector<T>& 
