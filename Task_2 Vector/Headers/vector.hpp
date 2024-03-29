@@ -240,11 +240,20 @@ Vector<T>::erase(size_type index){
 
 template <typename T>
 void 
-Vector<T>::clear(){
+Vector<T>::clear()
+{
     delete []arr;
     this->arr = nullptr;
     this->v_size = 0;
     this->v_capacity = 0;
+}
+
+template<typename T>
+void Vector<T>::_swap(Vector& ob)
+{   
+    std::swap(m_ptr, ob.m_ptr);
+    std::swap(_size, ob._size);
+   
 }
 
 
