@@ -50,9 +50,12 @@ Vector<T>::Vector(std::initializer_list<T> init)
 template <typename T>
 Vector<T>::Vector(Vector&& other)
 {   
-    ob.clear();
-    ob = other.ob;
-    other.ob = {nullptr};
+    //std::cout << "ctor" << std::endl;
+
+    v_size = other.v_size;
+    v_capacity = other.v_capacity;
+    arr = other.arr;
+    other.arr = {nullptr};
     
 }
 
@@ -70,6 +73,23 @@ Vector<T>::operator=(const Vector& rhv)
             this->arr[i] = rhv.arr[i];
         }
     }
+    return *this;
+}
+
+
+template <typename T>
+const Vector<T>& 
+Vector<T>::operator=(Vector&& rhv)
+{
+    if (this == &rhv)
+    {
+        clear();
+        v_size = rhv.v_size;
+        v_capacity = rhv.v_capacity;
+        arr = rhv.arr;
+        rhv.arr = nullptr;
+    }
+    
     return *this;
 }
 
@@ -255,10 +275,10 @@ Vector<T>::clear()
 }
 
 template<typename T>
-void Vector<T>::_swap(Vector& ob)
+void Vector<T>::Swap(Vector<T>& ob)
 {   
-    std::swap(m_ptr, ob.m_ptr);
-    std::swap(_size, ob._size);
+    std::swap(arr, ob.arr);
+    std::swap(v_size, ob.v_size);
    
 }
 

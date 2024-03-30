@@ -27,7 +27,8 @@ public:
     Vector(const Vector&);
     Vector(std::initializer_list<value_type>);
     Vector(Vector&& other);
-    const Vector& operator=(const Vector&);
+    const Vector& operator=(const Vector& rhv);
+    const Vector& operator=(Vector&& rhv);
     referance operator[](size_type ind);
     ~Vector();
 
