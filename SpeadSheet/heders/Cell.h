@@ -10,13 +10,13 @@ private:
 public:
     explicit operator int();
     explicit operator double();
-    //operator std::string();
+    operator std::string();
     const Cell& operator=(const Cell& rhv);
     const Cell& operator=(Cell&& rhv);
     Cell();
     explicit Cell(int n);
     explicit Cell(double d);
-    //Cell(std::string str);
+    Cell(std::string str);
     Cell(Cell&& rhv);
     Cell(const Cell& rhv);
     ~Cell();

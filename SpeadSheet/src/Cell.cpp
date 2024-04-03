@@ -16,7 +16,7 @@ const Cell& Cell::operator=(const Cell& rhv)
     {
         storage = rhv.storage;
     }
-        
+        return *this;
 }
 
 const Cell& Cell::operator=(Cell&& rhv)
@@ -39,10 +39,10 @@ explicit Cell::Cell(double d)
     storage = d;
 }
 
-/*Cell::Cell(std::string str)
+Cell::Cell(std::string str)
 {
     storage = str;
-}*/
+}
 
 Cell::Cell(Cell&& rhv)
 {
