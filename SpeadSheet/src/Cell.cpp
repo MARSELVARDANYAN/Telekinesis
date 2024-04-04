@@ -1,13 +1,19 @@
-#include "../heders/Cell.h"
+#include "../headers/Cell.h"
+#include <iostream>
 
-explicit Cell::operator int()
+Cell::operator int()
 {
     return std::stoi(storage);
 }
 
-explicit Cell::operator double()
+Cell::operator double()
 {
-    return std::stod(storage);
+    return std::stoi(storage);
+}
+
+Cell::operator std::string()
+{
+    return static_cast<Cell>(storage);
 }
 
 const Cell& Cell::operator=(const Cell& rhv)
@@ -25,16 +31,18 @@ const Cell& Cell::operator=(Cell&& rhv)
     {
         storage = std::move(rhv.storage);
     }
+
+    return *this;
 }
 
 Cell::Cell(){}
 
-explicit Cell::Cell(int n)
+Cell::Cell(int n)
 {
     storage = n;
 }
 
-explicit Cell::Cell(double d)
+Cell::Cell(double d)
 {
     storage = d;
 }
@@ -57,18 +65,18 @@ Cell::Cell(const Cell& rhv)
 Cell::~Cell()
 {}
 
-std::ostream& operator<<(std::ostream& out, const Cell& rhv)
+std::ostream& operator<<(std::ostream& out, Cell& rhv)
 {     
         
-        out << (rhv);
-    
-        return out;
+       out << std::stod(rhv);
+      return out;  
 }
 
 
-std::istream& operator>>(std::istream& inp, const Cell& rhv)
-{
-    inp >> (rhv);
+std::istream& operator>>(std::istream& inp, Cell& rhv)
+{   
+    
+    inp >> rhv;
 
     return inp;
 }
