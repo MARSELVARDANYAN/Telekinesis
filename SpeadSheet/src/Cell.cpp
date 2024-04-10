@@ -8,7 +8,7 @@ Cell::operator int()
 
 Cell::operator double()
 {
-    return std::stoi(storage);
+    return std::stod(storage);
 }
 
 Cell::operator std::string()
@@ -35,7 +35,9 @@ const Cell& Cell::operator=(Cell&& rhv)
     return *this;
 }
 
-Cell::Cell(){}
+Cell::Cell()
+: storage{}
+{}
 
 Cell::Cell(int n)
 {
@@ -65,10 +67,15 @@ Cell::Cell(const Cell& rhv)
 Cell::~Cell()
 {}
 
+std::string Cell::get_val()
+{
+    return storage;
+}
+
 std::ostream& operator<<(std::ostream& out, Cell& rhv)
 {     
         
-       out << std::stod(rhv);
+       out << rhv.get_val();
       return out;  
 }
 
@@ -76,7 +83,7 @@ std::ostream& operator<<(std::ostream& out, Cell& rhv)
 std::istream& operator>>(std::istream& inp, Cell& rhv)
 {   
     
-    inp >> rhv;
+    inp >> rhv.storage;
 
     return inp;
 }

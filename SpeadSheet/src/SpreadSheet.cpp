@@ -8,16 +8,21 @@ SpreadSheet::SpreadSheet()
 
 SpreadSheet::SpreadSheet(size_t n)
     : arr(new Cell*[n])
+    , row(n)
+    , col(n)
 {
     for (size_t i = 0; i < n; i++)
     {
         arr[i] = new Cell[n];
     }
+
     
 }
 
 SpreadSheet::SpreadSheet(size_t row, size_t col)
     : arr(new Cell* [row])
+    , row{row}
+    , col{col}
 {
     for (size_t i = 0; i < row; i++)
     {
@@ -94,8 +99,9 @@ const SpreadSheet& SpreadSheet::operator=(SpreadSheet&& rhv)
 }
 
 void SpreadSheet::add_row(size_t row, size_t col, std::string str)
-{
-    this->arr[row][col] = str;
+{   
+   
+    arr[row][col] = str;
 }
 
 void SpreadSheet::add_colum(size_t row, size_t col, std::string str)
@@ -227,6 +233,7 @@ void SpreadSheet::copy_from(size_t oth_row, size_t oth_col, const SpreadSheet& r
 {
     return;
 }*/
+
 
 size_t SpreadSheet::get_row()
 {

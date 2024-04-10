@@ -20,6 +20,8 @@ public:
     Cell(Cell&& rhv);
     Cell(const Cell& rhv);
     ~Cell();
+    std::string get_val();
+    friend std::istream& operator>>(std::istream& inp, Cell& rhv);
 };
 
 std::ostream& operator<<(std::ostream& out, Cell& rhv);

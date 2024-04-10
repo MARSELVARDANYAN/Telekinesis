@@ -1,0 +1,912 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 6.5.0-25-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdC/CMakeCCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdCXX/CMakeCXXCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-MYRl0E"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-MYRl0E"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-MYRl0E'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_343c3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_343c3.dir/build.make CMakeFiles/cmTC_343c3.dir/build
+        gmake[1]: Entering directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-MYRl0E'
+        Building C object CMakeFiles/cmTC_343c3.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_343c3.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Linking C executable cmTC_343c3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_343c3.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_343c3.dir/CMakeCCompilerABI.c.o -o cmTC_343c3 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_343c3.dir/build.make:99: cmTC_343c3] Error 1
+        gmake[1]: Leaving directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-MYRl0E'
+        gmake: *** [Makefile:127: cmTC_343c3/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /usr/bin/clang-cl-16"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-vlhvM2"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-vlhvM2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-vlhvM2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0b474/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0b474.dir/build.make CMakeFiles/cmTC_0b474.dir/build
+        gmake[1]: вход в каталог «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-vlhvM2»
+        Building C object CMakeFiles/cmTC_0b474.dir/testCCompiler.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_0b474.dir/testCCompiler.c.o -c "/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-vlhvM2/testCCompiler.c"
+        Linking C executable cmTC_0b474
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b474.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_0b474.dir/testCCompiler.c.o -o cmTC_0b474 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_0b474.dir/build.make:99: cmTC_0b474] Ошибка 1
+        gmake[1]: выход из каталога «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-vlhvM2»
+        gmake: *** [Makefile:127: cmTC_0b474/fast] Ошибка 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdC/CMakeCCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdCXX/CMakeCXXCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-clhkuF"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-clhkuF"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-clhkuF'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_719b5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_719b5.dir/build.make CMakeFiles/cmTC_719b5.dir/build
+        gmake[1]: Entering directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-clhkuF'
+        Building C object CMakeFiles/cmTC_719b5.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_719b5.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Linking C executable cmTC_719b5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_719b5.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_719b5.dir/CMakeCCompilerABI.c.o -o cmTC_719b5 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_719b5.dir/build.make:99: cmTC_719b5] Error 1
+        gmake[1]: Leaving directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-clhkuF'
+        gmake: *** [Makefile:127: cmTC_719b5/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /usr/bin/clang-cl-16"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-XnbWwE"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-XnbWwE"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-XnbWwE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bdfff/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bdfff.dir/build.make CMakeFiles/cmTC_bdfff.dir/build
+        gmake[1]: вход в каталог «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-XnbWwE»
+        Building C object CMakeFiles/cmTC_bdfff.dir/testCCompiler.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_bdfff.dir/testCCompiler.c.o -c "/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-XnbWwE/testCCompiler.c"
+        Linking C executable cmTC_bdfff
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bdfff.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_bdfff.dir/testCCompiler.c.o -o cmTC_bdfff 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_bdfff.dir/build.make:99: cmTC_bdfff] Ошибка 1
+        gmake[1]: выход из каталога «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-XnbWwE»
+        gmake: *** [Makefile:127: cmTC_bdfff/fast] Ошибка 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdC/CMakeCCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdCXX/CMakeCXXCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-Fbbp3h"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-Fbbp3h"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-Fbbp3h'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_593d7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_593d7.dir/build.make CMakeFiles/cmTC_593d7.dir/build
+        gmake[1]: Entering directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-Fbbp3h'
+        Building C object CMakeFiles/cmTC_593d7.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_593d7.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Linking C executable cmTC_593d7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_593d7.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_593d7.dir/CMakeCCompilerABI.c.o -o cmTC_593d7 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_593d7.dir/build.make:99: cmTC_593d7] Error 1
+        gmake[1]: Leaving directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-Fbbp3h'
+        gmake: *** [Makefile:127: cmTC_593d7/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /usr/bin/clang-cl-16"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-7oJ3Vp"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-7oJ3Vp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-7oJ3Vp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cf6e8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_cf6e8.dir/build.make CMakeFiles/cmTC_cf6e8.dir/build
+        gmake[1]: вход в каталог «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-7oJ3Vp»
+        Building C object CMakeFiles/cmTC_cf6e8.dir/testCCompiler.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_cf6e8.dir/testCCompiler.c.o -c "/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-7oJ3Vp/testCCompiler.c"
+        Linking C executable cmTC_cf6e8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf6e8.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_cf6e8.dir/testCCompiler.c.o -o cmTC_cf6e8 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_cf6e8.dir/build.make:99: cmTC_cf6e8] Ошибка 1
+        gmake[1]: выход из каталога «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-7oJ3Vp»
+        gmake: *** [Makefile:127: cmTC_cf6e8/fast] Ошибка 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdC/CMakeCCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdCXX/CMakeCXXCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-PcpuP0"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-PcpuP0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-PcpuP0'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8e51b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8e51b.dir/build.make CMakeFiles/cmTC_8e51b.dir/build
+        gmake[1]: Entering directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-PcpuP0'
+        Building C object CMakeFiles/cmTC_8e51b.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_8e51b.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Linking C executable cmTC_8e51b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e51b.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_8e51b.dir/CMakeCCompilerABI.c.o -o cmTC_8e51b 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_8e51b.dir/build.make:99: cmTC_8e51b] Error 1
+        gmake[1]: Leaving directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-PcpuP0'
+        gmake: *** [Makefile:127: cmTC_8e51b/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /usr/bin/clang-cl-16"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-CniiGR"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-CniiGR"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-CniiGR'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d9c0d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d9c0d.dir/build.make CMakeFiles/cmTC_d9c0d.dir/build
+        gmake[1]: вход в каталог «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-CniiGR»
+        Building C object CMakeFiles/cmTC_d9c0d.dir/testCCompiler.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_d9c0d.dir/testCCompiler.c.o -c "/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-CniiGR/testCCompiler.c"
+        Linking C executable cmTC_d9c0d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9c0d.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_d9c0d.dir/testCCompiler.c.o -o cmTC_d9c0d 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_d9c0d.dir/build.make:99: cmTC_d9c0d] Ошибка 1
+        gmake[1]: выход из каталога «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-CniiGR»
+        gmake: *** [Makefile:127: cmTC_d9c0d/fast] Ошибка 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdC/CMakeCCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+      clang: error: linker command failed with exit code 1 (use -v to see invocation)
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang-cl-16 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/3.27.4/CompilerIdCXX/CMakeCXXCompilerId.obj
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1155 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        Note: including file: ./foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-p354am"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-p354am"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-p354am'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_27dc7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_27dc7.dir/build.make CMakeFiles/cmTC_27dc7.dir/build
+        gmake[1]: Entering directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-p354am'
+        Building C object CMakeFiles/cmTC_27dc7.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_27dc7.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Linking C executable cmTC_27dc7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27dc7.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_27dc7.dir/CMakeCCompilerABI.c.o -o cmTC_27dc7 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_27dc7.dir/build.make:99: cmTC_27dc7] Error 1
+        gmake[1]: Leaving directory '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-p354am'
+        gmake: *** [Makefile:127: cmTC_27dc7/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /usr/bin/clang-cl-16"
+    directories:
+      source: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-qneU0t"
+      binary: "/home/marsel/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-qneU0t"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-qneU0t'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9e587/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9e587.dir/build.make CMakeFiles/cmTC_9e587.dir/build
+        gmake[1]: вход в каталог «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-qneU0t»
+        Building C object CMakeFiles/cmTC_9e587.dir/testCCompiler.c.o
+        /usr/bin/clang-cl-16    -o CMakeFiles/cmTC_9e587.dir/testCCompiler.c.o -c "/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-qneU0t/testCCompiler.c"
+        Linking C executable cmTC_9e587
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e587.dir/link.txt --verbose=1
+        /usr/bin/clang-cl-16 CMakeFiles/cmTC_9e587.dir/testCCompiler.c.o -o cmTC_9e587 
+        /usr/bin/ld: Error: unable to disambiguate: -nologo (did you mean --nologo ?)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_9e587.dir/build.make:99: cmTC_9e587] Ошибка 1
+        gmake[1]: выход из каталога «/home/marsel/Рабочий стол/tmp/Telekinesis/SpeadSheet/build/CMakeFiles/CMakeScratch/TryCompile-qneU0t»
+        gmake: *** [Makefile:127: cmTC_9e587/fast] Ошибка 2
+        
+      exitCode: 2
+...
