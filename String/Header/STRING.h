@@ -243,5 +243,5 @@ std::string to_string( float value );
 std::string to_string( double value );
 std::string to_string( long double value );
 
-#include "../Src/STRING.cpp"
+//#include "../Src/STRING.cpp"
 #endif
