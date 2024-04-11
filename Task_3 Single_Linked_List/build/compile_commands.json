@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/marsel/Telekinesis/Task_3 Single_Linked_List/build",
-  "command": "/usr/bin/clang++-16   -g -std=gnu++20 -o CMakeFiles/Forward_List.dir/Src/main.cpp.o -c \"/home/marsel/Telekinesis/Task_3 Single_Linked_List/Src/main.cpp\"",
-  "file": "/home/marsel/Telekinesis/Task_3 Single_Linked_List/Src/main.cpp",
-  "output": "CMakeFiles/Forward_List.dir/Src/main.cpp.o"
-}
-]

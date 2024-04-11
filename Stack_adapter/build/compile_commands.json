@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/marsel/Рабочий стол/Stack/build",
-  "command": "/usr/bin/g++   -g -std=gnu++20 -o CMakeFiles/Stack.dir/Src/main.cpp.o -c \"/home/marsel/Рабочий стол/Stack/Src/main.cpp\"",
-  "file": "/home/marsel/Рабочий стол/Stack/Src/main.cpp",
-  "output": "CMakeFiles/Stack.dir/Src/main.cpp.o"
-}
-]
