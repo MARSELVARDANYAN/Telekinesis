@@ -8,6 +8,48 @@ template <typename T>
 class Vector
 {
 private:
+    
+    class Allocator
+    {   
+    public:
+        T* ptr = nullptr;
+    public:
+        using value_type = T;
+        using pointer = T*;
+        using const_pointer = const T*;
+        using size_type = size_t;
+    
+    public:
+        Allocator() = default;
+        Allocator(const Allocator& rhv) = default;
+        ~Allocator() = default;
+
+    public:
+    
+        pointer allocate(size_type count)
+        {
+            ptr = ::operator new(count);
+    
+        }
+
+        void constract(T* ptr)
+        {
+            ptr = new (ptr) T;
+        }
+
+        void deallocate(void* ptr, size_type){}
+
+        void destroy(T* ptr)
+        {
+            std::destroy(ptr);
+        }
+
+    
+        std::size_t max_size();
+    
+    };
+
+private:
     std::size_t v_size;
     std::size_t v_capacity;
     T* arr;

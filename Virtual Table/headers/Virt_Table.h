@@ -222,7 +222,7 @@ struct Violin :MUSICANT
 };
 
 //8
-struct Guitar : MUSICANT
+struct Guitar :MUSICANT
 {
     static void play()
     {
@@ -230,7 +230,6 @@ struct Guitar : MUSICANT
     }
     GUVtbl* vptr = &guvtbl;
 };
-
 
 
 void leader(auto* ob)

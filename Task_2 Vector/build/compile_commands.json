@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/marsel/Telekinesis/Task_2 Vector/build",
-  "command": "/usr/bin/clang++-16   -g -std=gnu++20 -o CMakeFiles/Vector.dir/Src/main.cpp.o -c \"/home/marsel/Telekinesis/Task_2 Vector/Src/main.cpp\"",
-  "file": "/home/marsel/Telekinesis/Task_2 Vector/Src/main.cpp",
-  "output": "CMakeFiles/Vector.dir/Src/main.cpp.o"
-}
-]
