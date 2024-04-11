@@ -5,7 +5,7 @@
 class STRING
 {
 private:
-    char* arr;
+    char* str;
     size_t sz;
     size_t cap;
     static const size_t npos = -1;
@@ -29,9 +29,9 @@ public:
 public:
     //Member functions
     STRING();
-    STRING( Allocator() );
+    STRING(Allocator() );
     explicit STRING( const Allocator& alloc ) noexcept;
-    STRING( Allocator() ) {}
+    STRING( Allocator() );
     constexpr explicit STRING( const Allocator& alloc ) noexcept;
     //STRING( size_type count, CharT ch, const Allocator& alloc = Allocator() );
     constexpr STRING( size_type count, CharT ch, const Allocator& alloc = Allocator() );
@@ -49,7 +49,7 @@ public:
     STRING( InputIt first, InputIt last, const Allocator& alloc = Allocator() );
     template< class InputIt >
     constexpr STRING( InputIt first, InputIt last, const Allocator& alloc = Allocator() );
-    //STRING( const STRING& other );
+    STRING( const STRING& other );
     constexpr STRING( const STRING& other );	
     //STRING( const STRING& other, const Allocator& alloc );
     constexpr STRING( const STRING& other, const Allocator& alloc );        
@@ -64,7 +64,7 @@ public:
     STRING& operator= (const char* s);	
     STRING& operator= (char c);	
     STRING& operator= (std::initializer_list<char> il);	
-    STRING& operator= (STRING&& str) noexcept;
+    STRING& operator= (STRING&& str) noexcept;///////
     STRING& assign (const STRING& str);	
     STRING& assign (const STRING& str, size_type subpos, size_type sublen = npos);	
     STRING& assign (const char* s);	
@@ -80,13 +80,13 @@ public:
 
 public:
     //Element access
-    //char& at (size_type pos);
+    char& at (size_type pos);
     const char& at (size_type pos) const;
     //char& operator[] (size_type pos);
     const char& operator[] (size_type pos) const;
-    //char& front();
+    char& front();
     const char& front() const;
-    //char& back();
+    char& back();
     const char& back() const;
     const char* data() const noexcept;
     const char* c_str() const noexcept;
@@ -94,16 +94,16 @@ public:
 
 public:
     //Iterators
-    //iterator begin();
+    iterator begin();
     const_iterator begin() const;
     const_iterator cbegin() const noexcept;
-    //iterator end();
+    iterator end();
     const_iterator end() const;
     const_iterator cend() const noexcept;
-    //reverse_iterator rbegin();
+    reverse_iterator rbegin();
     const_reverse_iterator rbegin() const;
     const_reverse_iterator crbegin() const noexcept;
-    //reverse_iterator rend() noexcept;
+    reverse_iterator rend() noexcept;
     const_reverse_iterator rend() const noexcept;
     const_reverse_iterator crend() const noexcept;
 
@@ -243,5 +243,5 @@ std::string to_string( float value );
 std::string to_string( double value );
 std::string to_string( long double value );
 
-
+#include "../Src/STRING.cpp"
 #endif
