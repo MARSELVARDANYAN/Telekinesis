@@ -67,7 +67,7 @@ public:
     Vector(size_type);
     Vector(size_type, const_referance);
     Vector(const Vector&);
-    Vector(std::initializer_list<value_type>);
+    Vector(std::initializer_list<value_type> init);
     Vector(Vector&& other);
     const Vector& operator=(const Vector& rhv);
     const Vector& operator=(Vector&& rhv);
@@ -78,11 +78,11 @@ private:
     void re_cap(size_type);
 
 public:
-    size_type capacity();
-    size_type size();
+    size_type capacity() const;
+    size_type size() const;
     referance front();
     referance back();
-    bool empty();
+    bool empty() const;
     void print();
 
 public:

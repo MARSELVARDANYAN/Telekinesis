@@ -17,12 +17,12 @@ int main ()
     std::cout << std::endl;
     ob3.print();
     std::cout << std::endl;
-
-    std::cout << ob3 << std::endl;
     */
+    std::cout << ob3 << std::endl;
+    
     ob = std::move(ob3);
    
-    ob3.print();
+    //ob3.print();
 
     return 0;
 }

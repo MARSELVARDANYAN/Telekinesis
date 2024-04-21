@@ -37,7 +37,7 @@ Vector<T>::Vector(const Vector& rhv)
 }
 
 template <typename T>
-Vector<T>::Vector(std::initializer_list<T> init)
+Vector<T>::Vector(std::initializer_list<value_type> init)
     : Vector(0)
 {
     for (const T &val : init)
@@ -130,14 +130,14 @@ Vector<T>::re_cap(size_type new_cap)
 //Functions that change the contens of an array
 template <typename T>
 typename Vector<T>::size_type 
-Vector<T>::capacity()
+Vector<T>::capacity() const
 {
     return this->v_capacity;
 }
 
 template <typename T>
 typename Vector<T>::size_type
-Vector<T>::size()
+Vector<T>::size() const
 {
     return this->v_size;
 }
@@ -158,7 +158,7 @@ Vector<T>::back()
 
 template <typename T>
 bool 
-Vector<T>::empty()
+Vector<T>::empty() const
 {
     if (v_size == 0) {
         return true;
