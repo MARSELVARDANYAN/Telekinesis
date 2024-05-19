@@ -1,15 +1,8 @@
 
 #include <iostream>
 
-
 //----------------------------------------------------------------------//
 //base
-struct MTI
-{
-    std::string type_name = "MUSICANT";
-    std::string bases{};
-}mti;
-
 //1
 struct BTI
 {
@@ -79,8 +72,7 @@ private:
 //base 
 struct MVtbl
 {
-    MTI* type_info = &mti;
-    //void(*pl)() = &MUSICANT::play;
+    
 }mvtbl;
 
 //1
@@ -137,18 +129,18 @@ struct VVtbl
 struct GUVtbl
 {
     GUTI* type_info = &guti;
-    //void(*pl)() = &Guitar::play;
+    //void(*pl)()  = &Guitar::play;
 }guvtbl;
 
 
 //Base struct
 struct MUSICANT
 {   
-    static void play()
+    void play()
     {
         std::cout << "Musicant" << std::endl;
     }
-    MVtbl* vptr = &mvtbl;   
+    MVtbl* vptr = nullptr;   
 };
 
 // 1
@@ -224,12 +216,12 @@ struct Violin :MUSICANT
 //8
 struct Guitar :MUSICANT
 {
-    static void play()
+    static void play() 
     {
         std::cout << "Guitar is playing" << std::endl;
     }
     GUVtbl* vptr = &guvtbl;
-};
+}obj;
 
 
 void leader(auto* ob)

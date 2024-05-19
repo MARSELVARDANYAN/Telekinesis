@@ -2,27 +2,25 @@
 #include <iostream>
 
 
-int main () 
-{
-   
-    Vector<int> ob(std::move(Vector{9, 5}));
-    Vector<int> ob1(5, 55);
-    Vector<int> ob2(ob1);
-    Vector<int> ob3{1, 2, 3, 4, 5, 6, 7};
+int main() {
+    Vector<int> vec;
 
-    /*ob1.print();
-    std::cout << std::endl;
-    ob2.print();
+    vec.push_back(1);
+    vec.push_back(2);
+    vec.push_back(3);
+
+    std::cout << "First element: " << vec.front() << std::endl;
+    std::cout << "Last element: " << vec.back() << std::endl;
+
+    vec.insert(vec.begin(), 10);  
+    //vec.insert(20);
+
+
+    for (int value : vec) {
+        std::cout << value << " ";
+    }
 
     std::cout << std::endl;
-    ob3.print();
-    std::cout << std::endl;
-    */
-    std::cout << ob3 << std::endl;
-    
-    ob = std::move(ob3);
-   
-    //ob3.print();
-
     return 0;
 }
+
