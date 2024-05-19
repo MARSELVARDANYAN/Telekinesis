@@ -1,29 +1,28 @@
 #include "../Header/stack.h"
 
 template <typename T, typename Container>
-stack<T, Container>::stack()
+Stack<T, Container>::Stack()
     : ob()
 {}
 
 
 template <typename T, typename Container>
-stack<T, Container>::stack(const stack& rhv)
+Stack<T, Container>::Stack(const Stack& rhv)
     : ob(rhv.ob)
 {}
 
 
 template <typename T, typename Container>
-stack<T, Container>::stack(stack&& other)
+Stack<T, Container>::Stack(Stack&& rhv)
 {   
-    ob.clear();
-    ob = other.ob;
-    other.ob = {nullptr};
+    ob = rhv.ob;
+    rhv.ob = {nullptr};
     
 }
 
 
 template <typename T, typename Container>
-stack<T, Container>::stack(std::initializer_list<T> init)
+Stack<T, Container>::Stack(std::initializer_list<T> init)
 {
     for (auto &i : init)
     {
@@ -32,10 +31,17 @@ stack<T, Container>::stack(std::initializer_list<T> init)
     
 }
 
+template <typename T, typename Container>
+template <typename InputIt>
+Stack<T, Container>::Stack(InputIt first, InputIt last)
+{
+    ob.insert(ob.end(), first, last);
+}
+
 
 template <typename T, typename Container>
-const stack<T, Container>& 
-stack<T, Container>::operator=(const stack<T, Container>& rhv)
+const Stack<T, Container>& 
+Stack<T, Container>::operator=(const Stack& rhv)
 {
     if (this != &rhv) {
         ob.clear();
@@ -44,13 +50,11 @@ stack<T, Container>::operator=(const stack<T, Container>& rhv)
 
     return *this;
     
-    
 }
 
-
 template<typename T , typename Container>
-stack<T,Container>& 
-stack<T,Container>::operator=(stack&& rhv){
+Stack<T,Container>& 
+Stack<T,Container>::operator=(Stack&& rhv){
     if (this != &rhv) {        
         ob = std::move(rhv.ob);
     }
@@ -60,13 +64,13 @@ stack<T,Container>::operator=(stack&& rhv){
 
 
 template <typename T, typename Container>
-stack<T, Container>::~stack()
+Stack<T, Container>::~Stack()
 {}
 
 
 template <typename T, typename Container>
 void 
-stack<T, Container>::push(size_type elem)
+Stack<T, Container>::push(const_referance elem)
 {
     ob.push_back(elem);
 }
@@ -74,80 +78,78 @@ stack<T, Container>::push(size_type elem)
 
 template <typename T, typename Container>
 void 
-stack<T, Container>::pop()
+Stack<T, Container>::pop()
 {
     ob.pop_back();
 }
 
 
 template <typename T, typename Container>
-typename stack<T, Container>::referance
-stack<T, Container>::top()
+typename Stack<T, Container>::referance
+Stack<T, Container>::top()
 {
     return ob.back();
 }
 
+template <typename T, typename Container>
+typename Stack<T, Container>::const_referance 
+Stack<T, Container>::top()const
+{
+    return ob.back();
+}
 
 template <typename T, typename Container>
-typename stack<T, Container>::size_type
-stack<T, Container>::Size()
+typename Stack<T, Container>::size_type
+Stack<T, Container>::Size()
 {
     return ob.size();
 }
 
 
 template <typename T, typename Container>
-void 
-stack<T, Container>::swap(stack& other)
-{
-    std::swap(ob, other.ob);
-}
-
-
-template <typename T, typename Container>
 bool 
-stack<T, Container>::empty()
+Stack<T, Container>::empty()
 {
     return ob.empty();
 }
 
 
 //comparison operators
-template <class T, class Container = std::vector<T>>
-bool operator==(stack<T, Container>& lhv, stack<T, Container>& rhv)
+template <class T, class Container>
+bool Stack<T, Container>::operator==(const Stack& other)
 {
-    return lhv.Size() == rhv.Size();
+    return ob == other.ob;
 }
 
 
 template <class T, class Container>
-bool operator!=(stack<T, Container>& lhv, stack<T, Container>& rhv)
+bool Stack<T, Container>::operator!=(const Stack& other)
 {
-    return lhv.Size() != rhv.Size();
+    return ob != other.ob;
 }
 
 template <class T, class Container>
-bool operator>(stack<T, Container>& lhv, stack<T, Container>& rhv)
+bool Stack<T, Container>::operator>(const Stack& other)
 {
-    return lhv.Size() > rhv.Size();
+    return ob > other.ob;
 }
 
 template <class T, class Container>
-bool operator<(stack<T, Container>& lhv, stack<T, Container>& rhv)
+bool Stack<T, Container>::operator<(const Stack& other)
 {
-    return lhv.Size() < rhv.Size();
-}
-
-
-template <class T, class Container>
-bool operator<=(stack<T, Container>& lhv, stack<T, Container>& rhv)
-{
-    return lhv.Size() <= rhv.Size();
+    return ob < other.ob;
 }
 
 
 template <class T, class Container>
-bool operator>=(stack<T, Container>& lhv, stack<T, Container>& rhv)
+bool Stack<T, Container>::operator<=(const Stack& other)
 {
-    return lhv.Size() >= rhv.Size();
+    return ob <= other.ob;
+}
+
+
+template <class T, class Container>
+bool Stack<T, Container>::operator>=(const Stack& other)
+{
+    return ob >= other.ob;
 }

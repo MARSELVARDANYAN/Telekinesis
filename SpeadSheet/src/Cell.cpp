@@ -1,89 +1,183 @@
 #include "../headers/Cell.h"
-#include <iostream>
 
-Cell::operator int()
-{
-    return std::stoi(storage);
+std::ostream& operator<<(std::ostream& out, const std::vector<int>& ob)
+{   
+    for (auto &i : ob) {
+        out << i << ' ';
+    }
+    return out;
 }
 
-Cell::operator double()
-{
-    return std::stod(storage);
+std::istream& operator>>(std::istream& in, std::vector<int>& ob)
+{   
+    ob.clear();
+    int tmp{};
+    while (in >> tmp) {
+        ob.push_back(tmp);
+    }
+    return in;
 }
 
-Cell::operator std::string()
+Cell::Cell()
+: str{}
+{}
+
+Cell::Cell(const Cell& rhv)
+    : str(rhv.str)
+{}
+
+Cell::Cell(Cell&& rhv)
+    : str(std::move(rhv.str))
+{}
+
+Cell::Cell(int val)
+    : str(std::to_string(val))
+{}
+
+Cell::Cell(double val)
+    : str(std::to_string(val))
+{}
+
+Cell::Cell(char val)
+    : str(std::to_string(val))
+{}
+
+
+Cell::Cell(bool val)
 {
-    return static_cast<Cell>(storage);
+    str = (val == true) ? "true" : "false";
+}
+
+Cell::Cell(std::string val)
+    : str(val)
+{}
+
+Cell::Cell(const std::vector<int>& val)
+{
+    std::stringstream word;
+    for (const auto& elem : val) {
+        word << elem << ' '; 
+    }
+    str = word.str();
 }
 
 const Cell& Cell::operator=(const Cell& rhv)
 {
-    if (this != &rhv)
-    {
-        storage = rhv.storage;
+    if (this != &rhv) {
+        str = rhv.str;
     }
-        return *this;
+    return *this;
 }
 
 const Cell& Cell::operator=(Cell&& rhv)
 {
-    if (this != &rhv)
-    {
-        storage = std::move(rhv.storage);
+    if (this != &rhv) {
+        str = std::move(rhv.str);
     }
-
     return *this;
 }
 
-Cell::Cell()
-: storage{}
-{}
-
-Cell::Cell(int n)
+const Cell& Cell::operator=(int rhv)
 {
-    storage = n;
+    str = std::to_string(rhv);
+    return *this;
 }
 
-Cell::Cell(double d)
+const Cell& Cell::operator=(double rhv)
 {
-    storage = d;
+    str = std::to_string(rhv);
+    return *this;
 }
 
-Cell::Cell(std::string str)
+const Cell& Cell::operator=(char rhv)
 {
-    storage = str;
+    str = std::to_string(rhv);
+    return *this;
 }
 
-Cell::Cell(Cell&& rhv)
+const Cell& Cell::operator=(bool rhv)
 {
-    storage = std::move(rhv.storage);
+    str = (rhv == true) ? "true": "false";
+    return *this;
 }
 
-Cell::Cell(const Cell& rhv)
+const Cell& Cell::operator=(std::string rhv)
 {
-    storage = rhv.storage;
+    str = rhv;
+    return *this;
 }
 
-Cell::~Cell()
-{}
-
-std::string Cell::get_val()
+const Cell& Cell::operator=(const std::vector<int>& rhv)
 {
-    return storage;
+    std::stringstream word;
+    for (const auto& elem : rhv) {
+        word << elem << ' '; 
+    }
+    str = word.str();
+    return *this;
 }
 
-std::ostream& operator<<(std::ostream& out, Cell& rhv)
-{     
-        
-       out << rhv.get_val();
-      return out;  
+Cell::operator int() const
+{
+    return std::stoi(str);
+}
+
+Cell::operator double() const
+{
+    return std::stod(str);
+}
+
+Cell::operator char() const
+{
+    if (str.empty()) {
+        return '\0'; 
+    }
+    return str[0];
+}
+
+Cell::operator bool() const
+{
+    return !str.empty();
+}
+
+Cell::operator std::string() const
+{
+    return str;
+}
+
+Cell::operator std::vector<int>() const
+{
+    std::vector<int> vec;
+    vec.push_back(std::stoi(str));
+    return vec;
+}
+
+bool operator==(const Cell& lhv, const Cell& rhv)
+{
+    // std::string lhs = lhv;  //.operator std::string();
+    // std::string rhs = rhv;  //.operator std::string();
+    // return lhs == rhs;
+    return (lhv.operator std::string() == rhv.operator std::string());
+}
+
+bool operator!=(const Cell& lhv, const Cell& rhv)
+{
+    std::string lhs = lhv;//.operator std::string();
+    std::string rhs = rhv;//.operator std::string();
+    return lhs != rhs;
+}
+
+std::ostream& operator<<(std::ostream& out, const Cell& rhv)
+{            
+    out << rhv.operator std::string();
+    return out;  
 }
 
 
 std::istream& operator>>(std::istream& inp, Cell& rhv)
 {   
-    
-    inp >> rhv.storage;
-
+    std::string tmp;
+    inp >> tmp;
+    rhv.operator=(tmp);
     return inp;
 }

@@ -2,9 +2,10 @@
 #define __STACK__
 #include <vector>
 #include <initializer_list>
+#include <iostream>
 
 template <typename T, typename Container = std::vector<T>>
-class stack
+class Stack
 {
     private:
         Container ob;
@@ -18,19 +19,35 @@ class stack
        
 
     public:
-        stack();
-        explicit stack(const stack & rhv);
-        explicit stack(stack&& other);
-        stack(std::initializer_list<T> init);
-        const stack<T, Container>& operator=(const stack<T, Container>& rhv);
-        stack<T, Container>& operator=(stack<T, Container>&& rhv);
-        ~stack();
-        void push(size_type elem);
-        void pop();
-        value_type& top();
+        Stack();
+        Stack(const Stack & rhv);
+        Stack(Stack&& rhv);
+        Stack(std::initializer_list<value_type> init);
+        template <typename InputIt>
+        Stack(InputIt first, InputIt last);
+        ~Stack();
+
+        const Stack& operator=(const Stack& rhv);
+        Stack& operator=(Stack&& rhv);
+        
+        
+        referance top();
+        const_referance top()const;
+
         size_type Size();
-        void swap(stack& other);
         bool empty();
+
+        void push(const_referance elem);
+        void pop();
+
+    public:
+        bool operator==(const Stack& other);
+        bool operator!=(const Stack& other);
+        bool operator<(const Stack& other);
+        bool operator<=(const Stack& other);
+        bool operator>(const Stack& other);
+        bool operator>=(const Stack& other);
+        
 };
 
 

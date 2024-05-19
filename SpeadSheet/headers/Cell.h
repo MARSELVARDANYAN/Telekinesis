@@ -1,31 +1,53 @@
 #ifndef __CELL__
 #define __CELL__
 #include <iostream>
+#include <sstream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+std::ostream& operator<<(std::ostream& out, const std::vector<int>& ob);
+std::istream& operator>>(std::istream& in, std::vector<int>& ob);
 
 class Cell
 {
 private:
-    std::string storage;
+    std::string str;
 
 public:
-    operator int();
-    operator double();
-    operator std::string();
-    const Cell& operator=(const Cell& rhv);
-    const Cell& operator=(Cell&& rhv);
     Cell();
-    Cell(int n);
-    Cell(double d);
-    Cell(std::string str);
-    Cell(Cell&& rhv);
     Cell(const Cell& rhv);
-    ~Cell();
-    std::string get_val();
-    friend std::istream& operator>>(std::istream& inp, Cell& rhv);
+    Cell(Cell&& rhv);
+    Cell(int val);
+    Cell(double val);
+    Cell(char val);
+    Cell(bool val);
+    Cell(std::string val);
+    Cell(const std::vector<int>& val);
+    ~Cell() = default;
+
+    const Cell& operator=(const Cell& rhv);  
+    const Cell& operator=(Cell&& rhv);  
+    const Cell& operator=(int rhv);  
+    const Cell& operator=(double rhv);  
+    const Cell& operator=(char rhv);  
+    const Cell& operator=(bool rhv);  
+    const Cell& operator=(std::string rhv);  
+    const Cell& operator=(const std::vector<int>& rhv);
+
+    operator int() const;  
+    operator double() const;  
+    operator char() const;  
+    operator bool() const;  
+    operator std::string() const;  
+    operator std::vector<int>() const;
 };
 
-std::ostream& operator<<(std::ostream& out, Cell& rhv);
-std::istream& operator>>(std::istream& inp, Cell& rhv);
+bool operator==(const Cell& lhv, const Cell& rhv);
+bool operator!=(const Cell& lhv, const Cell& rhv);
+
+std::ostream& operator<<(std::ostream& out, const Cell& ob);
+std::istream& operator>>(std::istream& in, Cell& ob);
 
 
 #endif

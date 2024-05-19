@@ -5,44 +5,71 @@
 class SpreadSheet
 {
 private:
-    Cell** arr;
-    std::size_t row;
-    std::size_t col;
+    Cell** board;
+    std::size_t rowcnt;
+    std::size_t colcnt;
 
 private:
-
-    struct  SUBS
-    {
-        size_t x;
-        size_t y;
-    }obj;
-    
+    class Column;
+        
 public:
     SpreadSheet();
-    SpreadSheet(size_t n);
+    SpreadSheet(const SpreadSheet& rhv);
+    SpreadSheet(SpreadSheet&& rhv);
+    SpreadSheet(size_t size);
     SpreadSheet(size_t row, size_t col);
     ~SpreadSheet();
-    Cell& operator[](SUBS obj);
+
     const SpreadSheet& operator=(const SpreadSheet& rhv);
     const SpreadSheet& operator=(SpreadSheet&& rhv);
 
+    Column operator[](size_t pos);
+    const Column operator[](size_t pos) const;
 
-public:
-    size_t get_row();
-    size_t get_col();
-    void add_row(size_t row, size_t col, std::string str);
-    void add_colum(size_t row, size_t col, std::string str);
-    void resize_row(size_t row);
-    void resize_column(size_t col);
-    void delete_row(size_t del_row);
-    void delete_column(size_t del_col);
-    void copy_from(size_t oth_row, size_t oth_col, const SpreadSheet& rhv);
-    //SpreadSheet slice(size_t row, size_t col);
+    void clear() noexcept;
 
+    size_t row() const;
+    size_t col() const;
+    
+    void mirrorH();
+    void mirrorV();
+    void mirrorD();
+    void mirrorSD();
+
+    void rotate(int cnt);
+
+    void removeRow(size_t row);
+    void removeRows(std::initializer_list<size_t> rows);
+    void removeCol(size_t col);
+    void removeCols(std::initializer_list<size_t> cols);
+
+    void resizeRow(size_t r);
+    void resizeCol(size_t c);
+    void resize(size_t r, size_t c);
+
+
+    SpreadSheet slice(std::initializer_list<size_t> rows, std::initializer_list<size_t> cols); 
 };
 
-std::ostream& operator<<(std::ostream& out, SpreadSheet& rhv);
-std::istream& operator>>(std::istream& inp, SpreadSheet& rhv);
+class SpreadSheet::Column {
+    private:
+        Cell* column;
+    public:
+        explicit Column(Cell* col);
+    public:
+        Column() = delete;
+
+        const Column& operator=(const Column&) = delete;
+        const Column& operator=(Column&&) = delete;
+    public:
+        Cell& operator[](size_t pos);
+        const Cell& operator[](size_t pos) const;
+};
+
+bool operator==(const SpreadSheet& lhv, const SpreadSheet& rhv);
+bool operator!=(const SpreadSheet& lhv, const SpreadSheet& rhv);
+
+std::ostream& operator<<(std::ostream& out, const SpreadSheet& ob);
 
 
 #endif

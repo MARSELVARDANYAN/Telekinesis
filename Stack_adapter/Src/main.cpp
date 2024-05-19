@@ -3,17 +3,23 @@
 
 int main() 
 {
-    stack<int, std::vector<int>> ob{1, 2, 3};
+    Stack<int> ob{1, 2, 3};
 
-    stack<int, std::vector<int>> ob1(ob);
+    Stack<int> ob1(ob);
 
-    stack<int, std::vector<int>> ob2 = (stack{1, 5, 5, 2});
+    Stack<int> ob2 = {1, 2, 1, 8};
 
-    stack<int, std::vector<int>> ob4{9, 7, 8, 9};
+    Stack<int> ob4{9, 7, 8, 9};
 
-    bool i = (ob1 < ob2);
+    bool i = (ob1 == ob2);
+
+    std::cout << ob.empty() << std::endl;
+
+    ob.push(4);
+    ob.pop();
+    ob1.top();
     
 
     std::cout << i << std::endl;
-    std::cout << std::endl;
+
 }
