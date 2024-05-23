@@ -92,7 +92,7 @@ Vector<T, Allocator>::operator=(const Vector& rhv)
         // this->arr = new value_type[rhv.v_capacity];
         alloc.clallocate(arr, rhv.v_capacity);
         for(size_t i = 0; i < v_size; ++i){
-            alloc.construct(arr + i, rhv.arr_[i]);
+            alloc.construct(arr + i, rhv.arr[i]);
         }
     }
     return *this;
@@ -108,7 +108,7 @@ Vector<T, Allocator>::operator=(Vector&& rhv)
         v_size = std::move(rhv.v_size);
         v_capacity = std::move(rhv.v_capacity);
         arr = rhv.arr;
-        rhv.arr{nullptr};
+        rhv.arr = nullptr;
     }
     
     return *this;
@@ -338,7 +338,7 @@ Vector<T, Allocator>::clear() noexcept
 template <typename T, typename Allocator>
 typename Vector<T, Allocator>::iterator
 Vector<T, Allocator>::insert(const_iterator pos, const_reference val) {
-    size_type index = std::distance(pos, cbegin());
+        size_type index = pos.ptr - arr;
 
     if (v_size + 1 > v_capacity) {
         reserve(v_capacity == 0 ? 1 : v_capacity * 2);
@@ -360,7 +360,8 @@ Vector<T, Allocator>::insert(const_iterator pos, const_reference val) {
 template <typename T, typename Allocator>
 typename Vector<T, Allocator>::iterator 
 Vector<T, Allocator>::insert(const_iterator pos, size_type count, const_reference val) {
-    size_type index = std::distance(pos, begin());
+    size_type index = pos.ptr - arr;
+   // size_type index = std::distance(pos, begin());
 
     if (count == 0) {
         return cbegin() + index;
@@ -407,7 +408,7 @@ Vector<T, Allocator>::insert(const_iterator pos, size_type count, const_referenc
 template <typename T, typename Allocator>
 typename Vector<T, Allocator>::iterator 
 Vector<T, Allocator>::insert(const_iterator pos, std::initializer_list<value_type> init) {
-    size_type index = std::distance(cbegin(), pos);
+    size_type index = pos.ptr - arr;
     size_type new_elements = init.size();
 
     if (v_size + new_elements > v_capacity) {
@@ -434,24 +435,28 @@ template <typename T, typename Allocator>
 template <typename InputIt>
 typename Vector<T, Allocator>::iterator 
 Vector<T, Allocator>::insert(const_iterator pos, InputIt first, InputIt last) {
-    size_type index = std::distance(pos, cbegin());
-    size_type new_elements = std::distance(first, last);
+    size_type index = pos.ptr - arr;
+    
+    size_type count = 0;
+    for (InputIt it = first; it != last; ++it) {
+        ++count;
+    }
 
-    if (v_size + new_elements > v_capacity) {
-        reserve((v_size + new_elements) * 2);
+    if (v_size + count > v_capacity) {
+         reserve((v_size + count) * 2);
     }
 
     for (size_type i = v_size; i > index; --i) {
-        alloc.construct(arr + i + new_elements - 1, std::move(arr[i - 1]));
+        alloc.construct(arr + i + count - 1, std::move(arr[i - 1]));
         alloc.destroy(arr + i - 1);
     }
 
     size_type i = index;
     for (InputIt it = first; it != last; ++it, ++i) {
-        alloc.construct(arr + i, *it);
+        alloc.construct(arr + i, std::move(it));
     }
 
-    v_size += new_elements;
+    v_size += count;
     return begin() + index;
 }
 
@@ -462,31 +467,41 @@ template <typename T, typename Allocator>
 typename Vector<T, Allocator>::iterator 
 Vector<T, Allocator>::erase(const_iterator pos)
 {
-    return erase(pos, pos + 1);
+    size_type index = pos.ptr - arr;
+    
+    if (index < v_size) {
+        alloc.destroy(arr + index);
+
+        for (size_type i = index; i < v_size - 1; ++i) {
+            alloc.construct(arr + i, std::move(arr[i + 1]));
+            alloc.destroy(arr + i + 1);
+        }
+
+        --v_size;
+    }
+
+    return arr + index;
 }   
 
 template <typename T, typename Allocator>
 typename Vector<T, Allocator>::iterator 
 Vector<T, Allocator>::erase(const_iterator first, const_iterator last) {
-    if (first == last) {
-        return const_cast<iterator>(first);
-    }
+    size_type index_first = first.ptr - arr;
+    size_type index_last = last.ptr - arr;
+    size_type count = index_last - index_first;
 
-    size_type start = first - begin();
-    size_type end = last - begin();
-    size_type num_to_erase = end - start;
-
-    for (size_type i = start; i < end; ++i) {
+    for (size_type i = index_first; i < index_last; ++i) {
         alloc.destroy(arr + i);
     }
 
-    for (size_type i = end; i < v_size; ++i) {
-        alloc.construct(arr + i - num_to_erase, std::move(arr[i]));
+    for (size_type i = index_last; i < v_size; ++i) {
+        alloc.construct(arr + i - count, std::move(arr[i]));
         alloc.destroy(arr + i);
     }
 
-    v_size -= num_to_erase;
-    return begin() + start;
+    v_size -= count;
+
+    return arr + index_first;
 }
 
 

@@ -12,8 +12,11 @@ int main() {
     std::cout << "First element: " << vec.front() << std::endl;
     std::cout << "Last element: " << vec.back() << std::endl;
 
-    vec.insert(vec.begin(), 10);  
-    //vec.insert(20);
+    vec.insert(vec.cbegin(), 5, 5);  
+    vec.insert(vec.begin(), 6);
+    vec.insert(vec.begin() + 4, {22, 33, 44, 55});
+    vec.erase(vec.begin(), vec.end() - 5);
+    vec.erase(vec.begin() + 1);
 
 
     for (int value : vec) {
