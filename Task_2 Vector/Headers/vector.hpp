@@ -736,7 +736,7 @@ typename Vector<T, Allocator>::iterator
 Vector<T, Allocator>::iterator::operator++(int)
 {
     iterator temp = *this;
-    --this->ptr;
+    ++this->ptr;
     return temp;
 }
 
@@ -744,7 +744,7 @@ template <typename T, typename Allocator>
 typename Vector<T, Allocator>::iterator&
 Vector<T, Allocator>::iterator::operator--() 
 {
-    ++this->ptr;
+    --this->ptr;
     return *this;
 }
 

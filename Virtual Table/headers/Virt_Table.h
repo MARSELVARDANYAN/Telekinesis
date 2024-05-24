@@ -127,7 +127,7 @@ struct VVtbl
 
 //8
 struct GUVtbl
-{
+{   
     GUTI* type_info = &guti;
     //void(*pl)()  = &Guitar::play;
 }guvtbl;
@@ -224,7 +224,7 @@ struct Guitar :MUSICANT
 }obj;
 
 
-void leader(auto* ob)
+void leader(MUSICANT* ob)
 {
     ob->play();
 }

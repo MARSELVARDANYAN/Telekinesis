@@ -9,6 +9,6 @@ int main()
     Clarinet* clarinet;
     leader(clarinet);
 
-    Guitar* guitar;
-    leader(guitar);
+    Guitar guitar;
+    leader(&guitar);
 }
